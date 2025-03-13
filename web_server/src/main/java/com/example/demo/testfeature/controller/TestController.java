@@ -48,4 +48,10 @@ public class TestController {
         testService.test();
         return "test";
     }
+
+    @GetMapping("/cache/{id}")
+    public String CacheTest(@PathVariable("id") Long id) {
+        testService.CacheTest(id);
+        return "test";
+    }
 }

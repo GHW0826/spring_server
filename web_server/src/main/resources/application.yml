@@ -1,12 +1,16 @@
 spring:
   application:
     name: demo
+  redis:
+    host: "ENC(Ro3liGidHMUOG+vr5XHZPNJT8/RTWGUZ)"
+    port: "ENC(aPsD6NkYqzTAWpLe+4OmVw==)"
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3307/world?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: root
-    password: 
+    # url: jdbc:mysql://localhost:3307/world?useSSL=false&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    url: "ENC(bCtWHorxzj0GV4Nowq47zXgGBHa5pGFqqpAGA2H/nrFObjZokccwnMcLhfTjGlknDcBW9SczaZnVxYmf0I8Jx149iPDl4kSQCTVas+0cq/MEk9TOvoWTRzxNqzcqU2wTEcNzv/IbEK4oJ/HcjrU/nA==)"
+    username: "ENC(e2L9z5/g1BCifOauzFRQVw==)"
+    password: "ENC(E0FM2zaYz5SXLDtCFhkgAnolYst9zIOc)"
   jpa:
     open-in-view: true
     hibernate:
@@ -21,3 +25,11 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
+
+jasypt:
+  encryptor:
+    bean: jasyptEncryptorAES
+
+app:
+  cache:
+    type: inmemory  # inmemory, redis, none
